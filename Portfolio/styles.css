@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+section {
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+/* Header + Fixed Navigation Bar */
+nav {
+    height: 70px;
+    background-color: rgb(36, 36, 36);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: rgb(0, 255, 255);
+    text-shadow: 0 0 5px;
+}
+
+.nav-container .links {
+    display: flex;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 255, 255);
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: rgb(0, 255, 255);
+}
+
+/* Main Section */
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.main-container h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.main-container h1 span {
+    color: rgb(255, 0, 255);
+    text-shadow: 0 0 40px rgb(255, 0, 255);
+}
+
+.main-container .image {
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+}
+
+.main-container .image img {
+    width: 400px;
+    height: 400px;
+}
+
+.main-container .image img:hover {
+    animation: animate1 0.5s ease;
+}
+
+@keyframes animate1 {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.05;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.main-container .content {
+    color: rgb(255, 255, 255);
+    width: 40%;
+    min-height: 100px;
+}
+
+#home {
+    height: 110vh;
+}
+
+/* About Section */
+
+#about {
+    height: 80vh;
+    background-color: rgb(36, 36, 36);
+}
+
+#about h2 {
+    text-align: center;
+    color: rgb(0, 255, 255);
+    font-size: 2.5rem;
+    height: 150px;
+}
+
+#about p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 50px;
+    height: 250px;
+}
+
+.about-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.about-content .text {
+    width: 700px;
+}
+
+.about-content .image {
+    width: 500px;
+}
+
+.about-content .image img {
+    height: 300px;
+    width: 300px;
+}
+
+
+/* Skills Section */
+#skills {
+    height: 70vh;
+    background-color: rgb(0, 0, 0);
+}
+
+#skills h2 {
+    text-align: center;
+    color: rgb(0, 255, 255);
+    font-size: 2.5rem;
+    height: 150px;
+}
+
+#skills ul {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 50px;
+    height: 250px;
+}
+
+.skills-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.skills-content .text {
+    width: 700px;
+}
+
+.skills-content .image {
+    width: 500px;
+}
+
+.skills-content .image img {
+    height: 300px;
+    width: 300px;
+}
+
+/* Projects Section */
+#projects {
+    height: auto;
+    background-color: rgb(36, 36, 36);
+}
+
+#projects h2 {
+    text-align: center;
+    color: rgb(0, 255, 255);
+    font-size: 2.5rem;
+    height: 150px;
+}
+
+#projects h3 {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+#projects p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 50px;
+    height: 250px;
+}
+
+.project-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-content .text {
+    width: 700px;
+}
+
+.project-content .button {
+    width: 500px;
+    height: 300px;
+}
+
+.project-content .button button {
+    width: 150px;
+    height: 50px;
+    transition: all 0.4s ease;
+    background-color: rgb(0, 255, 255);
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.project-content .button button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 255, 255);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Resume Section */
+#resume {
+    height: 80vh;
+    background-color: rgb(0, 0, 0);
+}
+
+#resume h2 {
+    text-align: center;
+    color: rgb(0, 255, 255);
+    font-size: 2.5rem;
+    height: 150px;
+}
+
+#resume p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 50px;
+    height: 200px;
+}
+
+.resume-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.resume-content .text {
+    width: 700px;
+    text-align: center;
+}
+
+.resume-content .image {
+    width: 500px;
+}
+
+.resume-content .image img {
+    height: 300px;
+    width: 300px;
+}
+
+.resume-content .text button {
+    width: 200px;
+    height: 50px;
+    transition: all 0.4s ease;
+    background-color: rgb(0, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.resume-content .text button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 255, 255);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+#contact {
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+    height: 50vh;
+}
+
+#contact h2 {
+    text-align: center;
+    color: rgb(0, 255, 255);
+    font-size: 2.5rem;
+    height: 100px;
+}
+
+.contact-content {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 50px;
+    height: 250px;
+}
+
+.contact-content a {
+    position: relative;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.contact-content a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 255, 255);
+    transition: 0.2s linear;
+}
+
+.contact-content a:hover::before {
+    width: 100%;
+}
+
+.contact-content a:hover {
+    color: rgb(0, 255, 255);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+}
+
+.footer-container .social-icons {
+    margin-bottom: 15px;
+}
+
+.footer-container .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-container .social-icons a:hover {
+    color: rgb(0, 255, 255);
+}
+
+.footer-container p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Typewriter Effect */
+.typewriter {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(0, 255, 255);
+}
+
+.typewriter-text {
+    border-right: 2px solid white;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+}
